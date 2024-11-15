@@ -11,9 +11,18 @@ return new class extends Migration
         Schema::create('konyvek', function (Blueprint $table) 
         {
             $table->id();
-            $table->string('uuid')->unique();
-            
+            $table->string('konyvnev');
+            $table->string('szerzo');
+            $table->string('mufaj');
+            $table->string('kiadas');
+        });
+        Schema::create('foglalasok', function (Blueprint $table) 
+        {
+            $table->id();
+            $table->string('email');
+            $table->string('konyvid');
+            $table->date('kolcsonzes');
+            $table->date('return');
         });
     }
-
 };
