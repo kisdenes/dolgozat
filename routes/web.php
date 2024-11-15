@@ -11,4 +11,4 @@ Route::get('/new-genre', function ()
     return view('newgenre')
           ;
 });
-Route::post('newgenre', [GenreController::class, 'store'])->name('genre.store'); 
+Route::post('new-genre', [GenreController::class, 'store'])->name('mufaj.store'); 
