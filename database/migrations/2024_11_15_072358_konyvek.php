@@ -13,8 +13,9 @@ return new class extends Migration
             $table->id();
             $table->string('konyvnev');
             $table->string('szerzo');
-            $table->string('mufaj');
+            $table->string('mufajid');
             $table->string('kiadas');
+            $table->softdeletes();
         });
         Schema::create('foglalasok', function (Blueprint $table) 
         {
@@ -23,6 +24,13 @@ return new class extends Migration
             $table->string('konyvid');
             $table->date('kolcsonzes');
             $table->date('return');
+            $table->softdeletes();
+        });
+        Schema::create('mufajok', function (Blueprint $table) 
+        {
+            $table->id();
+            $table->string('mufaj');
+            $table->softdeletes();
         });
     }
 };
