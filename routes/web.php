@@ -12,3 +12,23 @@ Route::get('/new-genre', function ()
           ;
 });
 Route::post('new-genre', [GenreController::class, 'store'])->name('mufaj.store'); 
+Route::get('/new-book', function () 
+{
+    return view('newbook')
+          ;
+});
+Route::get('/books', function () 
+{
+    return view('books')
+          ;
+});
+Route::get('/back', function () 
+{
+    return view('back')
+          ;
+});
+Route::get('/rentals', function () 
+{
+    return view('rentals')
+          ;
+});
